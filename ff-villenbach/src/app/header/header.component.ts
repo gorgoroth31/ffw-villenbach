@@ -20,13 +20,7 @@ export class HeaderComponent {
   menuOptions: string[] = ["Home", "Aktuelles", "Aktive Wehr", "Jugend"]
   mobileMenuOpen: boolean = false;
 
-  showBanner: boolean = true;
-
-  bannerMessage: string = "🔥150 Jahre Feuerwehr Villenbach - Festwochenende 5.7.2025 und 6.7.2025🔥"
-
   toggleMobileNavbar() {
-    let message = this.mobileMenuOpen ? "menu is now closed" : "menu is now open"
-    console.log(message)
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 

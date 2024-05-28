@@ -1,11 +1,4 @@
-@if (showBanner) {
-  <div class="banner">
-    <p>
-    {{bannerMessage}}
-    </p>
-  </div>
-}
-<div [ngClass]="{'header-container' : true, 'with-banner' : showBanner, 'without-banner' : !showBanner}">
+<div [ngClass]="{'header-container' : true, 'without-banner' : true}">
   <img id="logo" src="assets/img/stock/logo.png" alt="logo der feuerwehr villenbach">
   <nav id="menu-options-pc">
     @for(menu of menuOptions; track $index) {
@@ -24,9 +17,9 @@
     <!--hier noch n zweites div, das über die ganze bildschirmgröße geht und bei click aus menü rausgeht-->
     <nav id="menu-options-mobile">
       @for(menu of menuOptions; track $index) {
-        <a class="mobile-link" (click)="mobileLinkClick()" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+        <a class="mobile-link" [ngClass]="{'first-menu-link' : $index === 0}" (click)="mobileLinkClick()" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
       }
     </nav>
   }
 </div>
-<div [ngClass]="{'placeholder-10vh' : !showBanner, 'placeholder-15vh' : showBanner}"></div>
+<div [ngClass]="{'placeholder' : true}"></div>
