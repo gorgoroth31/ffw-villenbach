@@ -57,6 +57,11 @@
   color: black;
 }
 
+.pc-link:hover {
+  border-bottom: 2px solid red;
+  margin-bottom: -2px;
+}
+
 .mobile-link {
   margin-right: 5vw;
   text-decoration: none;
@@ -108,4 +113,8 @@
   .first-menu-link {
     margin-top: 10vh;
   }
+}
+
+@keyframes border-extend {
+
 }
