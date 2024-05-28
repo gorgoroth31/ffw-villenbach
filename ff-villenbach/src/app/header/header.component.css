@@ -2,6 +2,15 @@
   --height: 10vh;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-size: 3em;
+  text-wrap: nowrap;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;

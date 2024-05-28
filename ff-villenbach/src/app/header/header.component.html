@@ -1,3 +1,10 @@
+@if (showBanner) {
+  <div class="banner">
+    <p>
+    {{bannerMessage}}
+    </p>
+  </div>
+}
 <div [ngClass]="{'header-container' : true, 'with-banner' : showBanner, 'without-banner' : !showBanner}">
   <img id="logo" src="assets/img/stock/logo.png" alt="logo der feuerwehr villenbach">
   <nav id="menu-options-pc">
