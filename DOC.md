@@ -1,0 +1,2 @@
+- In Header kommen alle relevanten Links rechtsbündig rein. Logo ist linksbündig und hat onclick ne animation, wo die webseite bissl brennt 
+	- Animation Logo: großes feuer gif raussuchen 
