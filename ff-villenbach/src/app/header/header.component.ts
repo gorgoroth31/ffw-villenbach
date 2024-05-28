@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {LowerCasePipe, NgOptimizedImage} from "@angular/common";
+import {LowerCasePipe, NgClass, NgOptimizedImage} from "@angular/common";
 import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
 
 @Component({
@@ -10,11 +10,20 @@ import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
     RouterLink,
     NgOptimizedImage,
     LowerCasePipe,
-    RemoveWhiteSpacePipe
+    RemoveWhiteSpacePipe,
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   menuOptions: string[] = ["Home", "Aktuelles", "Aktive Wehr", "Jugend"]
+  mobileMenuOpen: boolean = true;
+
+  toggleMobileNavbar() {
+    let message = this.mobileMenuOpen ? "menu is now closed" : "menu is now open"
+    console.log(message)
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
 }
+

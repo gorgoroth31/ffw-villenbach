@@ -1,9 +1,25 @@
 <div id="header-container">
   <img id="logo" src="assets/img/stock/logo.png" alt="logo der feuerwehr villenbach">
-  <div id="menu-options">
+  <nav id="menu-options-pc">
     @for(menu of menuOptions; track $index) {
-      <a routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+      <a class="pc-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
     }
-  </div>
+  </nav>
+
+  <button id="menu-burger-btn" class="mobile" (click)="toggleMobileNavbar()">
+    @if (mobileMenuOpen) {
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+    } @else {
+      <svg xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 mobile"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+    }
+  </button>
+  @if(mobileMenuOpen) {
+    <!--hier noch n zweites div, das über die ganze bildschirmgröße geht und bei click aus menü rausgeht-->
+    <nav id="menu-options-mobile">
+      @for(menu of menuOptions; track $index) {
+        <a class="mobile-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+      }
+    </nav>
+  }
 </div>
 <div id="placeholder"></div>
