@@ -18,12 +18,16 @@ import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
 })
 export class HeaderComponent {
   menuOptions: string[] = ["Home", "Aktuelles", "Aktive Wehr", "Jugend"]
-  mobileMenuOpen: boolean = true;
+  mobileMenuOpen: boolean = false;
 
   toggleMobileNavbar() {
     let message = this.mobileMenuOpen ? "menu is now closed" : "menu is now open"
     console.log(message)
     this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  mobileLinkClick() {
+    this.mobileMenuOpen = false;
   }
 }
 

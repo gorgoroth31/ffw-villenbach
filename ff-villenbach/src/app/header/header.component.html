@@ -17,7 +17,7 @@
     <!--hier noch n zweites div, das über die ganze bildschirmgröße geht und bei click aus menü rausgeht-->
     <nav id="menu-options-mobile">
       @for(menu of menuOptions; track $index) {
-        <a class="mobile-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+        <a class="mobile-link" (click)="mobileLinkClick()" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
       }
     </nav>
   }
