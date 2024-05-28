@@ -21,8 +21,6 @@ export class HeaderComponent {
   mobileMenuOpen: boolean = false;
 
   toggleMobileNavbar() {
-    let message = this.mobileMenuOpen ? "menu is now closed" : "menu is now open"
-    console.log(message)
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 

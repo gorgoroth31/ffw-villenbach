@@ -2,7 +2,18 @@
   --height: 10vh;
 }
 
-#header-container {
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  font-size: 3em;
+  text-wrap: nowrap;
+  position: absolute;
+}
+
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,10 +24,6 @@
   top: 0;
 }
 
-#placeholder {
-  width: 100vw;
-  height: var(--height);
-}
 
 #logo {
   height: 90%;
@@ -36,6 +43,7 @@
   margin-right: 2vw;
   background-color: transparent;
   border: none;
+  z-index: 1;
 }
 
 .mobile {
@@ -62,6 +70,16 @@
   display: none;
 }
 
+.placeholder-with-banner {
+  width: 100vw;
+  height: 15vh;
+}
+
+.placeholder {
+  width: 100vw;
+  height: 10vh;
+}
+
 @media only screen and (max-width: 768px) {
   #header-container {
     background-color: lightblue;
@@ -77,13 +95,17 @@
 
   #menu-options-mobile {
     position: absolute;
-    top: var(--height);
+    top: 0;
     left: 0;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background-color: rgba(140, 140, 140, 0.4);
     display: flex;
     flex-direction: column;
     align-items: end;
+  }
+
+  .first-menu-link {
+    margin-top: 10vh;
   }
 }
