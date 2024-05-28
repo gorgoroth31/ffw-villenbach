@@ -1,0 +1,42 @@
+* {
+  --height: 10vh;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--height);
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#placeholder {
+  width: 100vw;
+  height: var(--height);
+}
+
+#logo {
+  height: 90%;
+  max-width: 20%;
+  margin-left: 1vw;
+}
+
+#menu-options {
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+
+}
+
+a {
+  margin-right: 2vw;
+  text-decoration: none;
+  font-size: 2em;
+  color: black;
+}
+

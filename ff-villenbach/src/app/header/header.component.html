@@ -1,0 +1,9 @@
+<div id="header-container">
+  <img id="logo" src="assets/img/stock/logo.png" alt="logo der feuerwehr villenbach">
+  <div id="menu-options">
+    @for(menu of menuOptions; track $index) {
+      <a routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+    }
+  </div>
+</div>
+<div id="placeholder"></div>
