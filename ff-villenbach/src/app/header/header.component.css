@@ -2,7 +2,7 @@
   --height: 10vh;
 }
 
-#header-container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,12 +10,24 @@
   width: 100vw;
   position: absolute;
   left: 0;
+}
+
+.with-banner {
+  top: 5vh;
+}
+
+.without-banner {
   top: 0;
 }
 
-#placeholder {
+.placeholder-10vh {
   width: 100vw;
-  height: var(--height);
+  height: 10vh;
+}
+
+.placeholder-15vh {
+  width: 100vw;
+  height: 15vh;
 }
 
 #logo {

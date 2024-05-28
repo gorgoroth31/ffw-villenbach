@@ -1,4 +1,4 @@
-<div id="header-container">
+<div [ngClass]="{'header-container' : true, 'with-banner' : showBanner, 'without-banner' : !showBanner}">
   <img id="logo" src="assets/img/stock/logo.png" alt="logo der feuerwehr villenbach">
   <nav id="menu-options-pc">
     @for(menu of menuOptions; track $index) {
@@ -22,4 +22,4 @@
     </nav>
   }
 </div>
-<div id="placeholder"></div>
+<div [ngClass]="{'placeholder-10vh' : !showBanner, 'placeholder-15vh' : showBanner}"></div>

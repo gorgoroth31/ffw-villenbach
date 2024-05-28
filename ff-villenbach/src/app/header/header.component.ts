@@ -20,6 +20,8 @@ export class HeaderComponent {
   menuOptions: string[] = ["Home", "Aktuelles", "Aktive Wehr", "Jugend"]
   mobileMenuOpen: boolean = false;
 
+  showBanner: boolean = true;
+
   toggleMobileNavbar() {
     let message = this.mobileMenuOpen ? "menu is now closed" : "menu is now open"
     console.log(message)
