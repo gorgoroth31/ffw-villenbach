@@ -59,15 +59,7 @@
 }
 
 #menu-options-mobile {
-  position: absolute;
-  top: var(--height);
-  left: 0;
-  height: 90vh;
-  width: 100vw;
-  background-color: rgba(140, 140, 140, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -81,5 +73,17 @@
 
   .mobile {
     display: block;
+  }
+
+  #menu-options-mobile {
+    position: absolute;
+    top: var(--height);
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+    background-color: rgba(140, 140, 140, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
   }
 }
