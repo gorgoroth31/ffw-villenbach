@@ -3,6 +3,7 @@ import {JugendComponent} from "./jugend/jugend.component";
 import {AktuellesComponent} from "./aktuelles/aktuelles.component";
 import {AktiveWehrComponent} from "./aktive-wehr/aktive-wehr.component";
 import { VereinComponent } from './verein/verein.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 export const routes: Routes = [
   {
@@ -26,4 +27,8 @@ export const routes: Routes = [
     path: "verein",
     component: VereinComponent
   },
+  {
+    path: "impressum",
+    component: ImpressumComponent
+  }
 ];
