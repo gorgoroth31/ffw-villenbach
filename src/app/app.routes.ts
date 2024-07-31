@@ -1,18 +1,14 @@
 import { Routes } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
 import {JugendComponent} from "./jugend/jugend.component";
 import {AktuellesComponent} from "./aktuelles/aktuelles.component";
 import {AktiveWehrComponent} from "./aktive-wehr/aktive-wehr.component";
+import { VereinComponent } from './verein/verein.component';
 
 export const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "aktuelles",
     pathMatch: "full"
-  },
-  {
-    path: "home",
-    component: HomeComponent
   },
   {
     path: "aktuelles",
@@ -25,5 +21,9 @@ export const routes: Routes = [
   {
     path: "jugend",
     component: JugendComponent
+  },
+  {
+    path: "verein",
+    component: VereinComponent
   },
 ];

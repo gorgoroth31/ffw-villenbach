@@ -17,7 +17,7 @@ import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  menuOptions: string[] = ["Home", "Aktuelles", "Aktive Wehr", "Jugend"]
+  menuOptions: string[] = ["Aktuelles", "Aktive Wehr", "Jugend", "Verein"]
   mobileMenuOpen: boolean = false;
 
   toggleMobileNavbar() {
