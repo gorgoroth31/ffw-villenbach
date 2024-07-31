@@ -19,6 +19,7 @@
       @for(menu of menuOptions; track $index) {
         <a class="mobile-link" [ngClass]="{'first-menu-link' : $index === 0}" (click)="mobileLinkClick()" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
       }
+      <a class="mobile-link" (click)="mobileLinkClick()" routerLink="impressum">Impressum</a>
     </nav>
   }
 </div>
