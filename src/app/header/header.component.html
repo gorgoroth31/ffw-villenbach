@@ -2,7 +2,7 @@
   <img id="logo" src="assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach">
   <nav id="menu-options-pc">
     @for(menu of menuOptions; track $index) {
-      <a class="pc-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+      <a class="pc-link" (click)="route(menu)">{{menu}}</a>
     }
   </nav>
 

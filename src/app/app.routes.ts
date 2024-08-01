@@ -5,8 +5,11 @@ import {AktiveWehrComponent} from "./aktive-wehr/aktive-wehr.component";
 import { VereinComponent } from './verein/verein.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 
-export const routes: Routes = [
-  {
+export const routes: Routes = [{
+  path: "**",
+  redirectTo: ""
+}]
+  let someRoutes = [{
     path: "",
     redirectTo: "aktuelles",
     pathMatch: "full"

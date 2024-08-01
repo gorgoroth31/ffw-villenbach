@@ -59,6 +59,7 @@
 
 .pc-link:hover {
   border-bottom: 2px solid red;
+  cursor: pointer;
   margin-bottom: -2px;
 }
 
