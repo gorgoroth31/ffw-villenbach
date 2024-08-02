@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {LowerCasePipe, NgClass, NgOptimizedImage} from "@angular/common";
 import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
-import { RoutingService } from '../service/routing.service';
 
 @Component({
   selector: 'app-header',
@@ -19,9 +18,8 @@ import { RoutingService } from '../service/routing.service';
 })
 export class HeaderComponent {
   menuOptions: string[] = ["Aktuelles", "Aktive Wehr", "Jugend", "Verein"]
+  image: string = "\"assets/img/hochwasser/helibild-cropped.png\""
   mobileMenuOpen: boolean = false;
-
-  constructor(private router: RoutingService) {}
 
   toggleMobileNavbar() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
@@ -31,10 +29,6 @@ export class HeaderComponent {
     this.mobileMenuOpen = false;
   }
 
-  route(route: string) {
-    let lowerCase = route.toLowerCase()
-    let withoutBlank = lowerCase.replaceAll(" ", "")
-    this.router.next(withoutBlank)
-  }
+  protected readonly location = location;
 }
 

@@ -4,11 +4,11 @@ import {AktuellesComponent} from "./aktuelles/aktuelles.component";
 import {AktiveWehrComponent} from "./aktive-wehr/aktive-wehr.component";
 import { VereinComponent } from './verein/verein.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import {HomeComponent} from "./home/home.component";
 
 export const routes: Routes = [{
     path: "",
-    redirectTo: "aktuelles",
-    pathMatch: "full"
+    component: HomeComponent
   },
   {
     path: "aktuelles",
