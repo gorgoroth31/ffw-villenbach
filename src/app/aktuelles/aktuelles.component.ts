@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import {MatCard, MatCardContent, MatCardHeader} from "@angular/material/card";
 
 @Component({
   selector: 'app-aktuelles',
   standalone: true,
-  imports: [],
+  imports: [
+    MatCard,
+    MatCardHeader,
+    MatCardContent
+  ],
   templateUrl: './aktuelles.component.html',
   styleUrl: './aktuelles.component.css'
 })

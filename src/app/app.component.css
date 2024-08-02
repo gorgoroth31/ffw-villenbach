@@ -1,9 +1,14 @@
-#router-container {
+#routing-container {
   /*pc*/
-  height: 90vh;
-  width: 100vw;
+  width: 70vw;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 768px) {
   /*mobile*/
+  #routing-container {
+    width: 90vw;
+  }
 }
