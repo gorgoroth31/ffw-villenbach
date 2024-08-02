@@ -1,9 +1,5 @@
-#router-container {
+#routing-container {
   /*pc*/
-  width: 100vw;
-}
-
-.section {
   width: 96vw;
   margin-top: 3vh;
   margin-left: auto;

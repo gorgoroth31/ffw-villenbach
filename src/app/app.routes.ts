@@ -6,10 +6,6 @@ import { VereinComponent } from './verein/verein.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 
 export const routes: Routes = [{
-  path: "**",
-  redirectTo: ""
-}]
-  let someRoutes = [{
     path: "",
     redirectTo: "aktuelles",
     pathMatch: "full"
@@ -33,5 +29,9 @@ export const routes: Routes = [{
   {
     path: "impressum",
     component: ImpressumComponent
+  },
+  {
+    path: "**",
+    redirectTo: ""
   }
 ];
