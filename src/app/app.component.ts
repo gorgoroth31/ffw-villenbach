@@ -7,11 +7,12 @@ import { AktiveWehrComponent } from "./aktive-wehr/aktive-wehr.component";
 import { AktuellesComponent } from "./aktuelles/aktuelles.component";
 import { Subscription } from 'rxjs';
 import { RoutingService } from './service/routing.service';
+import {MatCard} from "@angular/material/card";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, JugendComponent, VereinComponent, AktiveWehrComponent, AktuellesComponent],
+  imports: [RouterOutlet, HeaderComponent, JugendComponent, VereinComponent, AktiveWehrComponent, AktuellesComponent, MatCard],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -32,5 +33,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.subscriptions.unsubscribe()
-  } 
+  }
 }
