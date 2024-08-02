@@ -1,34 +1,38 @@
-* {
-  --height: 10vh;
-}
-
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5vh;
-  font-size: 3em;
-  text-wrap: nowrap;
-  position: absolute;
-}
-
-
 .header-container {
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  background-size: cover;
+}
+
+#background-image {
+  width: 100vw;
+  aspect-ratio: 1/1;
+}
+
+#header-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--height);
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  top: 0;
+  height: 10vh;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1vh 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-
 
 #logo {
   height: 90%;
   max-width: 20%;
   margin-left: 1vw;
+  cursor: pointer;
+}
+
+#logo:hover {
+  animation: shakey .4s ease-in-out;
 }
 
 #menu-options-pc {
@@ -53,14 +57,13 @@
 .pc-link {
   margin-right: 2vw;
   text-decoration: none;
-  font-size: 2em;
-  color: black;
+  font-size: 1.5em;
+  color: white;
+  transition: .2s;
 }
 
 .pc-link:hover {
-  border-bottom: 2px solid red;
-  cursor: pointer;
-  margin-bottom: -2px;
+  font-size: 1.6em;
 }
 
 .mobile-link {
@@ -72,23 +75,25 @@
   margin-top: 5vh;
 }
 
+.mobile-link:hover {
+  /*
+  animation to make some sort of progress bar from left to right once
+  */
+}
+
 #menu-options-mobile {
   display: none;
-}
-
-.placeholder-with-banner {
-  width: 100vw;
-  height: 15vh;
-}
-
-.placeholder {
-  width: 100vw;
-  height: 10vh;
 }
 
 @media only screen and (max-width: 768px) {
   #header-container {
     background-color: lightblue;
+  }
+
+  #header-menu {
+    width: 100vw;
+    background-color: transparent;
+
   }
 
   #menu-options-pc {
@@ -116,6 +121,17 @@
   }
 }
 
-@keyframes border-extend {
-
+@keyframes shakey {
+  0% {
+    rotate: 0deg;
+  }
+  33% {
+    rotate: 10deg;
+  }
+  66% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
 }
