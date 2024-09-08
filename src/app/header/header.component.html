@@ -1,6 +1,6 @@
 <div class="header-container" [style]="'background-image: url(' + image + ')' ">
   <div id="header-menu">
-    <img id="logo" src="assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" (click)="location.href='/'">
+    <img id="logo" src="assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" routerLink="">
     <nav id="menu-options-pc">
       @for(menu of menuOptions; track $index) {
         <a class="pc-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
