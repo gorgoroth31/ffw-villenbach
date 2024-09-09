@@ -18,7 +18,10 @@
   width: 60vw;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid gray;
+  border-top: none;
   padding: 1vh 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -58,7 +61,7 @@
   margin-right: 2vw;
   text-decoration: none;
   font-size: 1.5em;
-  color: white;
+  color: whitesmoke;
   transition: .2s;
 }
 
@@ -93,7 +96,8 @@
   #header-menu {
     width: 100vw;
     background-color: transparent;
-
+    backdrop-filter: none;
+    border: none;
   }
 
   #menu-options-pc {
