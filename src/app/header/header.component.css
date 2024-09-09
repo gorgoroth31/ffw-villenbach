@@ -72,16 +72,10 @@
 .mobile-link {
   margin-right: 5vw;
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
   cursor: pointer;
   font-size: 2em;
   margin-top: 5vh;
-}
-
-.mobile-link:hover {
-  /*
-  animation to make some sort of progress bar from left to right once
-  */
 }
 
 #menu-options-mobile {
@@ -114,7 +108,8 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(140, 140, 140, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
     align-items: end;
