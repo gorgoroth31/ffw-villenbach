@@ -18,7 +18,7 @@ import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
 })
 export class HeaderComponent {
   menuOptions: string[] = ["Aktuelles", "Aktive Wehr", "Jugend", "Verein"]
-  image: string = "\"assets/img/hochwasser/helibild-cropped-blur.png\""
+  image: string = "\"assets/img/hochwasser/helibild-cropped.png\""
   mobileMenuOpen: boolean = false;
 
   toggleMobileNavbar() {
