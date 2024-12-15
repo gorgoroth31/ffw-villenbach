@@ -3,7 +3,7 @@
     <img id="logo" src="assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" routerLink="">
     <nav id="menu-options-pc">
       @for(menu of menuOptions; track $index) {
-        <a class="pc-link" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+        <a class="pc-link" routerLink={{menu[1]}}>{{menu[0]}}</a>
       }
     </nav>
 
@@ -18,7 +18,7 @@
       <!--hier noch n zweites div, das über die ganze bildschirmgröße geht und bei click aus menü rausgeht-->
       <nav id="menu-options-mobile">
         @for(menu of menuOptions; track $index) {
-          <a class="mobile-link" [ngClass]="{'first-menu-link' : $index === 0}" (click)="mobileLinkClick()" routerLink="{{menu | lowercase | removeWhiteSpace}}">{{menu}}</a>
+          <a class="mobile-link" [ngClass]="{'first-menu-link' : $index === 0}" (click)="mobileLinkClick()" routerLink="{{menu[1]}}">{{menu[0]}}</a>
         }
         <a class="mobile-link" (click)="mobileLinkClick()" routerLink="impressum">Impressum</a>
       </nav>
