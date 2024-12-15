@@ -5,6 +5,7 @@ import {AktiveWehrComponent} from "./aktive-wehr/aktive-wehr.component";
 import { VereinComponent } from './verein/verein.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import {HomeComponent} from "./home/home.component";
+import { Fest2025Component } from './fest2025/fest2025.component';
 
 export const routes: Routes = [{
     path: "",
@@ -29,6 +30,10 @@ export const routes: Routes = [{
   {
     path: "impressum",
     component: ImpressumComponent
+  },
+  {
+    path: "fest-2025",
+    component: Fest2025Component
   },
   {
     path: "**",
