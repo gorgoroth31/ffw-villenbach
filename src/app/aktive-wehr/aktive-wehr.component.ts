@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BreadcrumbsService } from '../service/breadcrumbs.service';
 
 @Component({
   selector: 'app-aktive-wehr',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './aktive-wehr.component.css'
 })
 export class AktiveWehrComponent {
-  fahrzeugImages = ["./ass"]
+
+  constructor(private breadcrumbsService: BreadcrumbsService) {}
+
+  ngOnInit(): void {
+    this.breadcrumbsService.setNewRoute([{displayName: "Aktive Wehr", routerlink:"aktivewehr"}])
+  }
 }
