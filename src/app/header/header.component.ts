@@ -1,16 +1,12 @@
 import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {LowerCasePipe, NgClass, NgOptimizedImage} from "@angular/common";
-import {RemoveWhiteSpacePipe} from "../remove-white-space.pipe";
+import { NgClass } from "@angular/common";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     RouterLink,
-    NgOptimizedImage,
-    LowerCasePipe,
-    RemoveWhiteSpacePipe,
     NgClass
 ],
   templateUrl: './header.component.html',
