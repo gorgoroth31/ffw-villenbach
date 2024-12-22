@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './aktive-wehr.component.css'
 })
 export class AktiveWehrComponent {
-
+  fahrzeugImages = ["./ass"]
 }
