@@ -1,4 +1,12 @@
 <app-header></app-header>
 <div id="routing-container">
+  <p class="breadcrumbs">
+    @for (item of breadcrumbs; track $index) {
+      <a routerLink="{{item.routerlink}}">{{item.displayName}}</a>
+      @if ($index !== breadcrumbs.length -1) {
+        <span class="breadcrumb-divider">/</span>
+      }
+    }
+  </p>
   <router-outlet></router-outlet>
 </div>

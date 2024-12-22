@@ -7,6 +7,20 @@
   padding-bottom: 10vh;
 }
 
+.breadcrumbs {
+  margin-bottom: 2vh;
+}
+
+.breadcrumbs > a {
+  text-decoration: none;
+  color: gray;
+}
+
+.breadcrumb-divider {
+  color: gray;
+  margin: 0 .5vw;
+}
+
 router-outlet {
   margin-top: -10vh;
 }
