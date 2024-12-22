@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BreadcrumbsService } from '../service/breadcrumbs.service';
 
 @Component({
   selector: 'app-impressum',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './impressum.component.css'
 })
 export class ImpressumComponent {
+  constructor(private breadcrumbsService: BreadcrumbsService) {}
 
+  ngOnInit(): void {
+    this.breadcrumbsService.setNewRoute([{displayName: "Impressum", routerlink:"impressum"}])
+  }
 }
