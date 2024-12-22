@@ -13,9 +13,8 @@ import { NgClass } from "@angular/common";
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  menuOptions: [string, string][] = [["Aktuelles", "aktuelles"], ["Fest 2025", "fest-2025"] ,["Aktive Wehr", "aktivewehr"], ["Jugend", "jugend"], ["Verein", "verein"]]
+  menuOptions: [string, string][] = [["Aktuelles", "aktuelles"], ["Fest 2025", "fest-2025"] ,["Aktive Wehr", "aktivewehr"], ["Jugend", "jugend"]]
 
-  // menuOptions: string[] = ["Aktuelles", "Aktive Wehr", "Jugend", "Verein"]
   image: string = "\"assets/img/hochwasser/helibild-cropped.png\""
   mobileMenuOpen: boolean = false;
 
