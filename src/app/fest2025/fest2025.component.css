@@ -19,6 +19,7 @@ hr {
 @media only screen and (max-width: 1600px) { 
     .flyer {
         margin-bottom: 5vh;
+        max-width: 90vw;
     }
 
     .flyer-wrapper {
