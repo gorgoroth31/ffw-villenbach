@@ -1,7 +1,6 @@
-- strategy: Home gibt eine kurze einführung + link zu aktuelles mit neuster Übungsplan (vielleicht mit pfadparameter zum element mit neuster übunbgsplan dass direkt hingescrollt wird irgendwie)
-- Außerdem großer Artikel mit Fest-Zeugs
-- Aktuelles zeigt in so blogmäßig an, was wir alles in letzter Zeit gemacht haben -> einzige Seite, die geupdatet werden soll
-- In Aktive Wehr, Jugend und Verein wird die Feuerwehr nur vorgestellt und der content soll nur wenn nötig verändert werden
-- Aktive Wehr: Kommandanten Vorstellung, ein paar ausgewählte Einsätze + Bilder Rondell zum durchclicken, bzw läuft auch automatisch durch
-- Jugend: stellt die Jugendleiter und die Jugend vor, und was die so machen
-- Verein: stellt den Vorstand vor und was wir so im Jahr machen (Dorffest, Absperren, Fest)
+# Webseite der freiwilligen Feuerwehr Villenbach
+Das ist das Repository des Codes für die Webseite der freiwilligen Feuerwehr Villenbach, die unter diesem [Link](https://www.feuerwehr-villenbach.de) zu finden ist. 
+Diese Webseite dient dazu die Feuerwehr etwas vorzustellen und Informationen, insbesondere des 150-jährigen Gründungsfestes 2025 zu teilen 
+<br />
+Technologisch wird hier das TypeScript-Framework Angular 17 benutzt und ein besonderes Merkmal ist die Kompatibilität für Mobile Ansichten
+<br />
