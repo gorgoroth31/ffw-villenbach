@@ -1,7 +1,7 @@
 <template>
 <div class="header-container" :style="'background-image: url(' + image + ')' ">
   <div id="header-menu">
-    <img id="logo" src="/src/assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" v-on:click="goTo('/')">
+    <img id="logo" src="/assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" v-on:click="goTo('/')">
     <nav id="menu-options-pc">
       <a v-for="menu of menuOptions" class="pc-link" v-on:click="goTo(menu[1])">{{menu[0]}}</a>
     </nav>
@@ -25,7 +25,7 @@ import { navigate } from 'astro/virtual-modules/transitions-router.js';
 let menuOptions: [string, string][] = [["Aktuelles", "/aktuelles"], ["Fest 2025", "/fest-2025"] ,["Aktive Wehr", "/aktive-wehr"], ["Jugend", "/jugend"]]
 let mobileMenuOpen: boolean = false;
 
-let image: string = "/src/assets/img/hochwasser/helibild-cropped.png"
+let image: string = "/assets/img/hochwasser/helibild-cropped.png"
 
 function goTo(link: string) {
   navigate(link)
