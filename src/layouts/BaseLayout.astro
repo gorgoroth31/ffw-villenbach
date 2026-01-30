@@ -1,0 +1,40 @@
+---
+import Header from "../components/Header.vue";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link href="/styles.css" rel="stylesheet" />
+        <title>FF Villenbach</title>
+    </head>
+    <body>
+        <Header client:load />
+
+        <main>
+            <!--TODO: Breadcrumbs? -->
+            <slot />
+        </main>
+    </body>
+</html>
+
+<style>
+    main {
+        width: 70vw;
+        margin-top: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10vh;
+    }
+
+    @media only screen and (max-width: 768px) {
+        /*mobile*/
+        main {
+            width: 90vw;
+        }
+    }
+</style>

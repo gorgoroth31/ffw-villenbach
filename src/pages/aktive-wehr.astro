@@ -1,4 +1,8 @@
-<h1>Unser Fuhrpark:</h1>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout>
+    <h1>Unser Fuhrpark:</h1>
 <article>
     <h2>Das LF 8/6: Unser großes Feuerwehrfahrzeug</h2>
     <p>Unser Feuerwehrfahrzeug, das LF 8/6, spielt eine zentrale Rolle bei der Bekämpfung von Bränden und der Rettung von Menschenleben. Für diejenigen, die sich mit Feuerwehrtechnik nicht auskennen, möchten wir hier einen kurzen Einblick geben.</p>
@@ -35,3 +39,21 @@
     </p>
     
 </article>
+</BaseLayout>
+
+<style>
+    .fahrzeug-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+    @media only screen and (max-width: 1300px) { 
+        .fahrzeug-images {
+            flex-direction: column;
+        }
+
+        .fahrzeug-images > img {
+            margin-bottom: 10vh;
+        }
+    }
+</style>
