@@ -1,29 +1,45 @@
 <template>
-<div class="header-container" :style="'background-image: url(' + image + ')' ">
-  <div id="header-menu">
-    <img id="logo" src="/assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach" v-on:click="goTo('/')">
-    <nav id="menu-options-pc">
-      <a v-for="menu of menuOptions" class="pc-link" v-on:click="goTo(menu[1])">{{menu[0]}}</a>
-    </nav>
+  <div class="header-container" :style="'background-image: url(' + image + ')'">
+    <div id="header-menu">
+      <img id="logo" src="/assets/img/stock/villenbach-logo.svg.png" alt="logo der feuerwehr villenbach"
+        v-on:click="goTo('/')">
+      <nav id="menu-options-pc">
+        <a v-for="menu of menuOptions" class="pc-link" v-on:click="goTo(menu[1])">{{ menu[0] }}</a>
+      </nav>
 
-    <button id="menu-burger-btn" class="mobile" (click)="toggleMobileNavbar()">
-        <svg v-if="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="white"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 mobile"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
-    </button>
-      <!--hier noch n zweites div, das über die ganze bildschirmgröße geht und bei click aus menü rausgeht-->
-    <nav v-if="mobileMenuOpen" id="menu-options-mobile">
-    <a v-for="(menu, $index) of menuOptions" class="mobile-link" :class="{'first-menu-link' : $index === 0}" v-on:click="goTo(menu[1])" routerLink="{{menu[1]}}">{{menu[0]}}</a>
-    <a class="mobile-link" (click)="mobileLinkClick()" routerLink="impressum">Impressum</a>
-    </nav>
+      <button id="menu-burger-btn" class="mobile" v-on:click="toggleMobileNavbar">
+        <svg v-if="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+          fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M18 6l-12 12" />
+          <path d="M6 6l12 12" />
+        </svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 mobile">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 6l16 0" />
+          <path d="M4 12l16 0" />
+          <path d="M4 18l16 0" />
+        </svg>
+      </button>
+
+      <nav v-if="mobileMenuOpen" id="menu-options-mobile">
+        <a v-for="(menu, $index) of menuOptions" class="mobile-link" :class="{ 'first-menu-link': $index === 0 }"
+          v-on:click="goTo(menu[1])">{{ menu[0] }}</a>
+        <a class="mobile-link" v-on:click="goTo('/impressum')">Impressum</a>
+      </nav>
+    </div>
   </div>
-</div>
 </template>
 
 <script setup lang="ts">
 import { navigate } from 'astro/virtual-modules/transitions-router.js';
+import { ref, type Ref } from 'vue';
 
-let menuOptions: [string, string][] = [["Aktuelles", "/aktuelles"], ["Fest 2025", "/fest-2025"] ,["Aktive Wehr", "/aktive-wehr"], ["Jugend", "/jugend"]]
-let mobileMenuOpen: boolean = false;
+let menuOptions: [string, string][] = [["Aktuelles", "/aktuelles"], ["Fest 2025", "/fest-2025"], ["Aktive Wehr", "/aktive-wehr"], ["Jugend", "/jugend"]]
+let mobileMenuOpen: Ref<boolean> = ref(false);
 
 let image: string = "/assets/img/hochwasser/helibild-cropped.png"
 
@@ -32,11 +48,11 @@ function goTo(link: string) {
 }
 
 function toggleMobileNavbar() {
-  mobileMenuOpen = !mobileMenuOpen;
+  mobileMenuOpen.value = !mobileMenuOpen.value;
 }
 
 function mobileLinkClick() {
-  mobileMenuOpen = false;
+  mobileMenuOpen.value = false;
 }
 
 </script>
@@ -179,15 +195,17 @@ a:hover {
   0% {
     rotate: 0deg;
   }
+
   33% {
     rotate: 10deg;
   }
+
   66% {
     rotate: -10deg;
   }
+
   100% {
     rotate: 0deg;
   }
 }
-
 </style>
