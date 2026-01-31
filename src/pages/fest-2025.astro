@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GeneralFlyer from "../assets/fest2025/general-flyer.png"
+import OldtimerFlyer from "../assets/fest2025/oldtimer-flyer.png"
 ---
 
 <BaseLayout breadcrumbs={[["Fest 2025", "/fest-2025"]]}>
@@ -10,8 +12,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <br />
     <h2 class="sub-headline">Festprogramm</h2>
     <div class="flyer-wrapper">
-        <img class="flyer" src="/assets/img/fest2025/general-flyer.png" />
-        <img class="flyer" src="/assets/img/fest2025/oldtimer-flyer.png" />
+        <img class="flyer" src={GeneralFlyer.src} />
+        <img class="flyer" src={OldtimerFlyer.src} />
     </div>
 </BaseLayout>
 

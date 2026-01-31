@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Man1 from "../assets/aktive-wehr/man1.jpg";
+import Man2 from "../assets/aktive-wehr/man2.jpg";
 ---
 <BaseLayout breadcrumbs={[["Aktive Wehr", "/aktive-wehr"]]}>
     <h1>Unser Fuhrpark:</h1>
@@ -8,8 +10,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <p>Unser Feuerwehrfahrzeug, das LF 8/6, spielt eine zentrale Rolle bei der Bekämpfung von Bränden und der Rettung von Menschenleben. Für diejenigen, die sich mit Feuerwehrtechnik nicht auskennen, möchten wir hier einen kurzen Einblick geben.</p>
     <br>
     <div class="fahrzeug-images">
-        <img src="/assets/img/aktive-wehr/man2.jpg" title="Feuerwehrauto vor ehemaligem Gerätehaus">
-        <img src="/assets/img/aktive-wehr/man1.jpg" title="Feuerwehrauto mit Atemschutz und Tragkraftspritze">
+        <img src={Man1.src} title="Feuerwehrauto vor ehemaligem Gerätehaus">
+        <img src={Man2.src} title="Feuerwehrauto mit Atemschutz und Tragkraftspritze">
     </div>
     <br>
     <h2>Was ist das LF 8/6?</h2>
