@@ -1,5 +1,7 @@
 ---
 import Header from "../components/Header.vue";
+import Breadcrumbs from "../components/Breadcrumbs.vue";
+const { breadcrumbs } = Astro.props;
 ---
 
 <html lang="en">
@@ -14,10 +16,11 @@ import Header from "../components/Header.vue";
     </head>
     <body>
         <Header client:load />
-
         <main>
-            <!--TODO: Breadcrumbs? -->
-            <slot />
+          <Breadcrumbs breadcrumbs={breadcrumbs}/>
+          <br/>
+          <br/>
+          <slot />
         </main>
     </body>
 </html>
