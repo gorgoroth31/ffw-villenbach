@@ -17,7 +17,7 @@ const { breadcrumbs } = Astro.props;
     <body>
         <Header client:load />
         <main>
-          <Breadcrumbs breadcrumbs={breadcrumbs}/>
+          <Breadcrumbs client:load breadcrumbs={breadcrumbs}/>
           <br/>
           <br/>
           <slot />
