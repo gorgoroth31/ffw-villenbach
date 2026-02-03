@@ -38,7 +38,7 @@
 import { navigate } from 'astro/virtual-modules/transitions-router.js';
 import { ref, type Ref } from 'vue';
 
-let menuOptions: [string, string][] = [["Aktuelles", "/aktuelles"], ["Fest 2025", "/fest-2025"], ["Aktive Wehr", "/aktive-wehr"], ["Jugend", "/jugend"]]
+let menuOptions: [string, string][] = [["Aktuelles", "/aktuelles"], ["Aktive Wehr", "/aktive-wehr"], ["Jugend", "/jugend"], ["Kontakt", "/kontakt"]]
 let mobileMenuOpen: Ref<boolean> = ref(false);
 
 let image: string = "/assets/img/hochwasser/helibild-cropped.png"
@@ -78,11 +78,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   width: 60vw;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   border: 1px solid gray;
   border-top: none;
@@ -125,13 +125,13 @@ a:hover {
 .pc-link {
   margin-right: 2vw;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: whitesmoke;
   transition: .2s;
 }
 
 .pc-link:hover {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .mobile-link {
