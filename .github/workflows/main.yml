@@ -32,3 +32,4 @@ jobs:
         target: '/website'
         port: 22
         strip_components: 1
+        insecure: true
