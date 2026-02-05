@@ -31,4 +31,4 @@ jobs:
         source: 'dist/*'
         target: '/website'
         port: 22
-        strip_componets: 1
+        strip_components: 1
