@@ -1,7 +1,7 @@
 <template>
   <span id="breadcrumbs-container">
     <a v-for="(breadcrumb, index) of allBreadcrumbs()" :href="breadcrumb[1]">
-      {{ breadcrumb[0] }}<span v-if="index !== allBreadcrumbs().length - 1" class="breadcrumb-divider">/</span>
+      {{ breadcrumb[0] }}<span v-if="index !== allBreadcrumbs().length - 1" class="breadcrumb-divider">></span>
     </a>
   </span>
 </template>
