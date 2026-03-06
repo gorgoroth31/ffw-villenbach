@@ -160,7 +160,7 @@ a:hover {
 
   #header-menu {
     width: 100vw;
-    background-color: transparent;
+    background-color: rgba(32, 32, 32, .5);
     backdrop-filter: none;
     border: none;
   }
